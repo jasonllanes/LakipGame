@@ -27,10 +27,10 @@ const MainPage = lazy(() =>
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/main-page" />,
+    element: <Navigate to="/" />,
   },
   {
-    path: "/main-page",
+    path: "/",
     element: <>
       <Suspense fallback={<Loader />}>
         <MainPage />
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
     element: <NotFound />,
   },
 ], {
-  basename: "/lakip"
+  basename: "/LakipGame"
 });
 
 function wait(time: number) {
