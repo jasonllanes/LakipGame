@@ -10,7 +10,7 @@ const choose_game = () => {
     const navigate = useNavigate()
 
     const handleLakipGameClick = () => {
-        navigate('/lakip/lakip-game')
+        navigate('/lakip-game')
     }
 
     return (

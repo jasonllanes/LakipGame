@@ -98,7 +98,7 @@ export default function LakipGameMainContainer() {
     };
 
     const handleBack = () => {
-        navigate('/lakip/main-page');
+        navigate('/main-page');
     };
 
     return (
