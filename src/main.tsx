@@ -15,14 +15,8 @@ import Loader from './components/loader/loader.tsx';
 //   wait(1300).then(() => import("./screens/page2.tsx"))
 // );
 
-
-
-const GameTwo = lazy(() =>
-  wait(1300).then(() => import("./screens/game_two_floppy/MainPageFlappyBird.tsx"))
-);
-
-const GameOne = lazy(() =>
-  wait(1300).then(() => import("./screens/game_one_mine/MainPage.tsx"))
+const LakipGame = lazy(() =>
+  wait(1300).then(() => import("./screens/lakip_game/LakipGameMainContainer.tsx"))
 );
 
 const MainPage = lazy(() =>
@@ -32,11 +26,11 @@ const MainPage = lazy(() =>
 
 const router = createBrowserRouter([
   {
-    path: "/eGov-Game",
-    element: <Navigate to="/eGov-Game/main-page" />,
+    path: "/lakip",
+    element: <Navigate to="/lakip/main-page" />,
   },
   {
-    path: "/eGov-Game/main-page",
+    path: "/lakip/main-page",
     element: <>
       <Suspense fallback={<Loader />}>
         <MainPage />
@@ -45,18 +39,10 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/eGov-Game/game-one",
+    path: "/lakip/lakip-game",
     element: <>
       <Suspense fallback={<Loader />}>
-        <GameOne />
-      </Suspense>
-    </>,
-  },
-  {
-    path: "/eGov-Game/game-two",
-    element: <>
-      <Suspense fallback={<Loader />}>
-        <GameTwo />
+        <LakipGame />
       </Suspense>
     </>,
   },
